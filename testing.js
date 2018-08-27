@@ -1,1 +1,1 @@
-console.log(script.kddjdj);
+console.log(kddjdj);
