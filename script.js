@@ -22,6 +22,8 @@ function mainLoop() {
   setTimeout(mainLoop, 0); // loooooooop!
 }
 
+mainLoop();
+
 function displayMenu() {
   var ctx = tetrisBoard.getContext("2d");
   ctx.textAlign = "center";
