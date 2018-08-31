@@ -1,3 +1,8 @@
+var tetrisBoard;
+var gNum;
+var preview;
+var currentState;
+
 // I Piece
 // J Piece
 // L Piece
@@ -7,10 +12,9 @@
 // Z Piece
 
 function initialize() {
-  var tetrisBoard = document.getElementById("tetris"); // the canvas
-  var gNum = 1; // gravity
-  var preview; // next piece
-  var currentState = "menu";
+  tetrisBoard = document.getElementById("tetris"); // the canvas
+  gNum = 1; // gravity
+  currentState = "menu";
 }
 
 function mainLoop() {
