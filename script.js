@@ -1,8 +1,3 @@
-var tetrisBoard = document.getElementById("tetris"); // the canvas
-var gNum = 1; // gravity
-var preview; // next piece
-var currentState = "menu";
-
 // I Piece
 // J Piece
 // L Piece
@@ -10,6 +5,13 @@ var currentState = "menu";
 // S Piece
 // T Piece
 // Z Piece
+
+function initialize() {
+  var tetrisBoard = document.getElementById("tetris"); // the canvas
+  var gNum = 1; // gravity
+  var preview; // next piece
+  var currentState = "menu";
+}
 
 function mainLoop() {
   switch(currentState) {
@@ -22,7 +24,7 @@ function mainLoop() {
   setTimeout(mainLoop, 0); // loooooooop!
 }
 
-mainLoop();
+initialize();
 
 function displayMenu() {
   var ctx = tetrisBoard.getContext("2d");
