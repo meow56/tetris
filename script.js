@@ -2,6 +2,7 @@ var tetrisBoard;
 var gNum;
 var preview;
 var currentState;
+var ctx;
 
 // I Piece
 // J Piece
@@ -13,12 +14,14 @@ var currentState;
 
 function initialize() {
   tetrisBoard = document.getElementById("tetris"); // the canvas
+  ctx = tetrisBoard.getContext("2d");
   gNum = 1; // gravity
   currentState = "menu";
   mainLoop();
 }
 
 function mainLoop() {
+  ctx.clearRect(0, 0, tetrisBoard.width, tetrisBoard.height);
   switch(currentState) {
     case "menu":
       displayMenu();
@@ -32,7 +35,6 @@ function mainLoop() {
 setTimeout(initialize, 10);
 
 function displayMenu() {
-  var ctx = tetrisBoard.getContext("2d");
   ctx.textAlign = "center";
   ctx.fillStyle = "black";
   ctx.font = "48px serif";
