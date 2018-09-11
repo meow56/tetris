@@ -15,6 +15,7 @@ function initialize() {
   tetrisBoard = document.getElementById("tetris"); // the canvas
   gNum = 1; // gravity
   currentState = "menu";
+  mainLoop();
 }
 
 function mainLoop() {
@@ -25,7 +26,7 @@ function mainLoop() {
   }
   
   
-  //setTimeout(mainLoop, 0); // loooooooop!
+  setTimeout(mainLoop, 0); // loooooooop!
 }
 
 initialize();
@@ -33,7 +34,7 @@ initialize();
 function displayMenu() {
   var ctx = tetrisBoard.getContext("2d");
   ctx.textAlign = "center";
-  ctx.fillStyle = "black";
+  //ctx.fillStyle = "black";
   ctx.fillText("Tetris", 150, 50);
   // TITLE
   // Play
