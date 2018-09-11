@@ -29,7 +29,7 @@ function mainLoop() {
   setTimeout(mainLoop, 0); // loooooooop!
 }
 
-initialize();
+setTimeout(initialize, 10);
 
 function displayMenu() {
   var ctx = tetrisBoard.getContext("2d");
