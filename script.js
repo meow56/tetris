@@ -25,7 +25,7 @@ function mainLoop() {
   }
   
   
-  setTimeout(mainLoop, 0); // loooooooop!
+  //setTimeout(mainLoop, 0); // loooooooop!
 }
 
 initialize();
