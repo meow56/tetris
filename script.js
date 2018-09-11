@@ -35,6 +35,7 @@ function displayMenu() {
   var ctx = tetrisBoard.getContext("2d");
   ctx.textAlign = "center";
   ctx.fillStyle = "black";
+  ctx.font = "48px serif";
   ctx.fillText("Tetris", 150, 50);
   // TITLE
   // Play
